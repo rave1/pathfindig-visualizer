@@ -24,5 +24,15 @@ namespace PathFindingVisualizer
         {
             InitializeComponent();
         }
+
+        private void astar(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void dijkstra(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
