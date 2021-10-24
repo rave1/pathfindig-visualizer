@@ -1,0 +1,45 @@
+﻿<Window x:Class="PathFindingVisualizer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PathFindingVisualizer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="10">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+
+		<Label>Path finding algorithm visualizer - Jakub Sopel</Label>
+
+		<StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0">
+			<Button x:Name="btnDij" Margin="0,5,0,0">Dijkstra</Button>
+			<Button x:Name="btnAstar" Margin="0,5,0,0">A*</Button>
+		</StackPanel>
+		
+		<Canvas Grid.Row="3" Grid.ColumnSpan="2">
+			<Canvas.Background>
+				<DrawingBrush TileMode="Tile" Viewport="0,0,20,20" ViewportUnits="Absolute">
+					<DrawingBrush.Drawing>
+						<GeometryDrawing>
+							<GeometryDrawing.Geometry>
+								<RectangleGeometry Rect="0,0,50,50"/>
+							</GeometryDrawing.Geometry>
+							<GeometryDrawing.Pen>
+								<Pen Brush="Gray" Thickness="1"/>
+							</GeometryDrawing.Pen>
+						</GeometryDrawing>
+					</DrawingBrush.Drawing>
+				</DrawingBrush>
+			</Canvas.Background>
+		</Canvas>
+	</Grid>
+</Window>
